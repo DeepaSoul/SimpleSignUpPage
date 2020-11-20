@@ -27,6 +27,10 @@ input {
   left: 0;
 }
 
+.error{
+border: 1px solid red;
+}
+
 .signin-signup {
   position: absolute;
   top: 50%;
