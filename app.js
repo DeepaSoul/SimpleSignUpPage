@@ -23,6 +23,10 @@ sign_up_submit.addEventListener("click", (e) => {
 if(!validateField("tel", document.forms["signUpForm"]["fname"].value, "Name").success) {validationResult = false; document.querySelector(".fname").classList.add("error")};
 if(!validateField("tel", document.forms["signUpForm"]["lname"].value, "Last Name").success) {validationResult = false; document.querySelector(".lname").classList.add("error")};
 if(!validateField("tel", document.forms["signUpForm"]["email"].value, "email").success) {validationResult = false; document.querySelector(".email").classList.add("error")};
+  
+  if(validationResult){
+     alert("Registration Successful.")
+     }
 });
 
 sign_in_submit.addEventListener("click", (e) => {
