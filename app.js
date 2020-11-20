@@ -18,10 +18,11 @@ sign_in_btn.addEventListener("click", (e) => {
 //Validate form fields
 sign_up_submit.addEventListener("click", (e) => {
   e.preventDefault();
-  if(!validateField("tel", document.forms["signUpForm"]["phoneNum"].value, "phoneNum").success) document.querySelector(".phoneNum").classList.add("error");
-if(!validateField("tel", document.forms["signUpForm"]["fname"].value, "Name").success) document.querySelector(".fname").classList.add("error");
-if(!validateField("tel", document.forms["signUpForm"]["lname"].value, "Last Name").success) document.querySelector(".lname").classList.add("error");
-if(!validateField("tel", document.forms["signUpForm"]["email"].value, "email").success) document.querySelector(".email").classList.add("error");
+  var validationResult = true;
+  if(!validateField("tel", document.forms["signUpForm"]["phoneNum"].value, "phoneNum").success) {validationResult = false;document.querySelector(".phoneNum").classList.add("error")};
+if(!validateField("tel", document.forms["signUpForm"]["fname"].value, "Name").success) {validationResult = false; document.querySelector(".fname").classList.add("error")};
+if(!validateField("tel", document.forms["signUpForm"]["lname"].value, "Last Name").success) {validationResult = false; document.querySelector(".lname").classList.add("error")};
+if(!validateField("tel", document.forms["signUpForm"]["email"].value, "email").success) {validationResult = false; document.querySelector(".email").classList.add("error")};
 });
 
 sign_in_submit.addEventListener("click", (e) => {
